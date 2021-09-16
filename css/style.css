@@ -1,0 +1,277 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+    font-weight: 600;
+    font-style: normal;
+    
+    /* устанавливаем картинку на фон блока */
+    /* background-image: url('../img/fon-0000.jpg'); */
+/* ------------------- */
+    /* background-repeat: no-repeat; */
+    /* определяем необходимость повторения фона */
+/* ------------------- */
+    /* background-position: right bottom; */
+    /* позиционируем положение фона */
+/* ------------------- */    
+    /* background-size: cover; */
+    /* изменяем размер фонового изображения */
+/* ------------------- */      
+    background: rgb(67,140,210);
+    background: linear-gradient(90deg, rgba(67,140,210,1) 0%, rgba(182,9,149,1) 100%);
+}
+
+.wrapper{
+    max-width: 1200px;
+    outline: 1px solid red;
+    margin: 25px auto;
+    background-color: #fff;
+    position: relative;
+    /* z-index: -100; */
+    min-height: 85vh;
+}
+
+.logo, .search, .nav_menu1 li, .nav_menu2 li, .nav_menu1, .nav_menu2{
+    display: inline-block;
+}
+
+.nav{
+    outline: 1px solid green;
+    line-height: 70px;
+    text-align: left;
+    margin-bottom: 120px;
+    font-size: 12px;
+    
+}
+
+.nav_menu2{
+   float: right;
+    display: none;
+}
+
+.logo, .search{
+    float: left;
+}
+
+.logo{
+    margin-top: 60px;
+    border-radius: 50%;
+}
+
+.search{
+    width: 330px;
+    margin-top: 65px;
+    border: 2px solid #999;
+    border-radius: 5px;
+    line-height: 35px;
+    background-color: #f7f9fc;
+    text-align: left;
+    padding: 5px;
+    margin-left: 15px;
+}
+
+.search i{
+    color: #ccc;
+}
+
+.search input{
+    border: none;
+    outline: none;
+}
+
+.nav_menu1{
+    margin-left: 120px;
+}
+
+.nav_menu1 li{
+    margin-right: 40px;
+}
+
+.nav_menu1 a{
+    text-decoration: none;
+    color: #2e3a59;
+    text-transform: uppercase;
+}
+
+.nav_menu1 a:hover, .nav_menu1 a.active{
+    text-shadow: 0 0 3px #000;
+}
+
+.main{
+    /* включаем флэкс-выравнивание внутри блока main */
+     display: flex;
+    /*flex-direction: row; варианты из менения направления построения блоков внутри main */
+
+    /* выравнивание блоков в горизонте внутри main */
+    justify-content: space-evenly;
+
+    /* выравнивание блоков по вертикали внутри main */
+    align-items: center;
+
+    /* перебрасывает блоки на новую строку, если они не помещаются в ряду */
+    flex-wrap: wrap;
+}
+
+.card{
+    outline: 1px solid blue;
+    width: 250px;
+    /* margin: 2.5%; */
+    margin: 5px 15px 40px 15px;
+    height: 70vh;
+}
+
+.card img{
+    width: 100%;
+}
+
+.test .card img{
+    border-radius: 50%;
+}
+
+.test .card{
+    overflow: hidden;
+}
+
+.picture{
+    width: 250px;
+    height: 250px;
+    outline: 1px solid rgb(186, 17, 158);
+    background-image: url('../img/Screenshot_1.jpg');
+    background-repeat: no-repeat;
+    background-size: 180%;
+    background-position: center;
+    border-radius: 50%;
+    margin: 15px auto;
+    transition: background-size .5s, opacity .5s .3s;
+    opacity: .4;
+}
+
+.picture:hover{
+    background-size: 250%;
+    opacity: 1;
+    
+}
+
+.section{
+    min-height: 70vh;
+}
+
+.section1{
+    background-color: rgb(119, 5, 5);
+}
+
+.section2{
+    background-image: url('../img/fon-0000.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.section3{
+    background-color: rgb(13, 109, 24);
+}
+
+.card2, .card3, .card1{
+    position: relative;
+    z-index: 0;
+}
+
+.new{
+    width: 52px !important;
+    height: 52px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn1{
+    width: 87px !important;
+    height: 28px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.bird{
+    width: 106px !important;
+    height: 90px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -99;
+}
+
+.phone{
+    position: fixed;
+    top: 300px;
+    left: 0;
+    z-index: 9999;
+}
+
+.card4{
+    /* как скрыть информацию */
+    /* opacity: 0; */
+    /* color: transparent; */
+    /* visibility: hidden; */
+    /* display: none; */
+    overflow: auto;
+    
+}
+
+.card4::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.card4::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);*/ 
+    -webkit-border-radius: 10px;
+    background-color:rgb(216, 43, 129);
+    border-radius: 10px;
+}
+
+/* Handle */
+.card4::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background:rgb(45, 153, 35); 
+    -webkit-box-shadow: inset 0 0 6px rgba(30, 121, 224, 0.5); 
+   
+}
+
+@media (max-width: 767px){
+    .nav_menu2{
+        display: block;
+     }
+     .nav_menu1{
+        display: none;
+    }
+    .logo, .search{
+        float: none;
+    }
+    .logo{
+        margin: 10px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .search{
+        line-height: 25px !important;
+        margin-top: 15px;
+        height: 35px;        
+    }
+
+    .nav{
+        line-height: 35px !important;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}
